@@ -1,0 +1,17 @@
+tree 
+-->binary tree
+--nonbinary tree
+
+binary tree 
+	--->	forming array of n element
+		we can find parent, children using just index
+		disadvantage --> no elemnt still taking space
+	-->	using doublely linked list
+
+
+
+preorder (r):
+	print(r)
+	stack.push(r._left)
+	stack.push(r._right)
+	p=stack.pop()		

@@ -67,7 +67,7 @@ done:
 
 ;----------------------------------------------------Matrix Formation Funtion--------------------------------------------------------------------------------------------------------------------------------------------------------;
 
-matrixFormation :                       ;fution for taking matirx as input
+matrixFormation :                       ;function for taking matirx as input
     push EBX                            ;taking order of matrix as input
     PutStr inputMessage
     PutStr empty_character
