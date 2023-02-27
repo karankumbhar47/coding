@@ -1,0 +1,16 @@
+
+This directory contains  a sample program written in IA 32 architecture
+
+Main file is prog1.asm
+
+Two additional  files (io.mac and io.o)  are required to generate executable file
+
+Command file give the command require to compile the code
+
+
+Reference: Guide to Assembly Language Programming in Linux 
+https://g.co/kgs/TZmqRg
+
+
+
+

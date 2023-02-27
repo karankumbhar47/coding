@@ -1,0 +1,129 @@
+nasm -f elf32 prog1.asm 
+
+ld  -m  elf_i386 -o prog1 prog1.o  io.o 
+
+./prog1
+
+
+
+nasm -f elf32 -g -F stabs $1.asm -o build/$1.o -l build/$1.lst
+
+ld  -m  elf_i386 -o build/$1 build/$1.o  io.o 
+
+operation:
+        Loop:
+            cmp byte CL," "
+            inc EBX
+            jne  Loop
+            add AX,1
+            cmp AX,2
+            jne Loop
+    
+        display_last_name:  
+            cmp byte CL,0
+            je done
+            PutCh CL
+            inc EBX
+            mov CL,[EBX]
+            jmp display_last_name
+    
+    done:
+            .EXIT
+            
+        
+
+
+        
+%include "io.mac"
+
+.DATA
+inputMessage db  "Please Enter Order of Square Matrix ", 0
+inputMessageRow db "Please Enter the Entries of Row No. ",0
+empty_character db ":- ",0
+
+.UDATA
+matrix_A resw 100
+order resw 1
+
+ 
+.CODE
+    .STARTUP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    PutStr inputMessage
+    PutStr empty_character
+    nwln
+    GetInt CX
+    mov [order],CX
+    mov AX,1
+    mov DX,0    ;row numberEB
+    mov EBX,matrix_A
+Row_Entry:
+    cmp DX ,[order]
+    je done
+    PutStr inputMessageRow
+    PutInt DX
+    PutStr empty_character
+    nwln
+Coloum_Entry:
+    GetInt  CX
+    mov [EBX],CX
+    add EBX,2
+    cmp AX , [order]
+    je entry_next
+    inc AX
+    jmp Coloum_Entry
+    
+entry_next: 
+    mov AX,1
+    inc DX
+    jmp Row_Entry
+;
+    
+done:
+    .EXIT
+            
+       
+
+            
+        
+
+
+        
+
+
+
+
