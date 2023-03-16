@@ -1,2 +1,4 @@
-l=[[0 for i in range(100)] for j in range(100)]
-print(l)
+import math
+
+for i in range(1,100):
+    print(i,"==>",math.log2(i))
