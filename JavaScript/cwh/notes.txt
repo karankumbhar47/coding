@@ -1,0 +1,10 @@
+variable = stirng / array / number / object
+dynamic typed - java at runtime change variable change
+static typed - c language
+
+a = 7
+a = identifire --> declaring variable
+7 = literal 
+7 = constant
+
+javascript is case sensitive
