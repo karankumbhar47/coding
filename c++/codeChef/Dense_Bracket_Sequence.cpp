@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <numeric>
 
 #define lli long long int
 #define loop(i, n) for (lli i = 0; i < n; i++)

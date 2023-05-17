@@ -8,6 +8,10 @@ void swap(int *a,int *b){
     *b = temp;
 }
 
+void function(){
+	for(int 
+}
+
 int partition(int*array, int l, int h){
     int i = l;
     int j = h;
