@@ -820,7 +820,17 @@
 #     print_heli()
 #     clear()
 
+num=9223372036854775807
+print(num)
+print(num*2)
+num2=bin(num)
+print(len(str(num2)))
+num = num +num
+print(num)
+num1=bin(num)
 
-import math
+print("",num2)
+print("",num2)
+print(num1)
+print(len(str(num1)))
 
-print(math.log(16,2))

@@ -1,5 +1,6 @@
 **/waste
 *.vscode
+*cph*
 env/*
 Python/env/*
 JavaScript/code_with_harry(course)/*
