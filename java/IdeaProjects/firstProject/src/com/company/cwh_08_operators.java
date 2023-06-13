@@ -1,6 +1,6 @@
 package com.company;
 
-public class cwc_08_operators {
+public class cwh_08_operators {
     public static void main(String [] args){
         System.out.println(4>=5);
         System.out.println(6==0);

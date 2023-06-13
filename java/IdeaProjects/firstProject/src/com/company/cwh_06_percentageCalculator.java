@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class cwc_06_percentageCalculator {
+public class cwh_06_percentageCalculator {
     public static void main(String [] args){
         Scanner scannerObject = new Scanner(System.in);
         System.out.println("taking marks as your input :-");

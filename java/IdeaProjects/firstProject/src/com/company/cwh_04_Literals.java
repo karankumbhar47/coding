@@ -1,6 +1,6 @@
 package com.company;
 
-public class cwc_04_Literals {
+public class cwh_04_Literals {
     public static void main(String [] args){
         byte age = 34; // here no need of writting any letter at last of literal
         System.out.println(age);
