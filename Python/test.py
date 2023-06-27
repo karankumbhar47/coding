@@ -820,17 +820,30 @@
 #     print_heli()
 #     clear()
 
-num=9223372036854775807
-print(num)
-print(num*2)
-num2=bin(num)
-print(len(str(num2)))
-num = num +num
-print(num)
-num1=bin(num)
+#num=9223372036854775807
+#print(num)
+#print(num*2)
+#num2=bin(num)
+#print(len(str(num2)))
+#num = num +num
+#print(num)
+#num1=bin(num)
+#
+#print("",num2)
+#print("",num2)
+#print(num1)
+#print(len(str(num1)))
 
-print("",num2)
-print("",num2)
-print(num1)
-print(len(str(num1)))
 
+import json
+import yt_dlp
+
+URL="https://www.youtube.com/watch?v=InigFUSiPl8&list=PLu0W_9lII9aiL0kysYlfSOUgY5rNlOhUd"
+
+# ℹ️ See help(yt_dlp.YoutubeDL) for a list of available options and public functions
+ydl_opts = {}
+with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+    info = ydl.extract_info(URL, download=False)
+
+    # ℹ️ ydl.sanitize_info makes the info json-serializable
+    print(json.dumps(ydl.sanitize_info(info)))

@@ -2,6 +2,7 @@ package com.company;
 
 import org.w3c.dom.ls.LSOutput;
 
+import java.util.Objects;
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -35,6 +36,11 @@ class SmartPhone extends phone{
 public class cwh_49_dynamicMethodDispatch {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+//        phone pd = new SmartPhone();
+        Object obj = new phone();
+        System.out.println(obj.getClass());
+        System.out.println(obj.toString());
+        System.out.println(obj.hashCode());
 //        phone ph = new phone();
 //        SmartPhone smPh = new SmartPhone();
         /*
@@ -47,10 +53,10 @@ public class cwh_49_dynamicMethodDispatch {
         but smartPhone  can't have company phone
         Super obj = new Sub();
          */
-        phone ph = new SmartPhone();
+//        phone ph = new SmartPhone();
 
-        ph.method2();
-        ph.on();
+//        ph.method2();
+//        ph.on();
 //        ph.method1();
         /*
         reference ==> superClass ==> phone ==> phone ph

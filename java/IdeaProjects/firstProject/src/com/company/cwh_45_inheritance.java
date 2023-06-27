@@ -4,20 +4,43 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 class FatherBaseSuperClass{
-    private int X;
+    protected int X;
 
-    public int getX() {
+    protected int getX() {
         return X;
     }
 
-    public void setX(int x) {
+    void setX(int x) {
         X = x;
+    }
+
+     void   methodTrial(){
+        System.out.println("This is methodTrial of class FatherBaseSuperClass");
     }
 }
 
 class childrenSubDerivedClass extends FatherBaseSuperClass{
     int Y;
+    @Override
+    public int getX(){
+        System.out.println("overriding method getX and changing access modifier");
+        System.out.println("protected --> public");
+        return this.X;
+    }
 
+    @Override
+    public  void methodTrial() {
+//        sSystem.out.println("overriding method method and changing access modifier");
+//        System.out.println("protected --> public");uper.methodTrial();
+//        System.out.println("");
+    }
+
+    @Override
+    public void setX(int x){
+        this.X = x;
+        System.out.println("overriding method setX and changing access modifier");
+        System.out.println("default --> public");
+    }
     public int getY() {
         return Y;
     }
